@@ -33,7 +33,7 @@ const Header = ({ title, onAdd, showAdd }) => {
 
 // set default if nothing passed in
 Header.defaultProps = {
-  title: 'Task Tracker'
+  title: 'Project Tracker'
 }
 
 // prop types makes code more robust and catches errors

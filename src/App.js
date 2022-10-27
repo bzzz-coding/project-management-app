@@ -115,7 +115,7 @@ const App = () => {
                 {/* AddTask form, && is a short ternary for no else condition */}
                 {showAddTask && <AddTask onAdd={addTask} />}
                 {/* pass in props: tasks, onDelete */}
-                {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No task to display'}
+                {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No project to display'}
               </>
             }
           />
