@@ -29,7 +29,7 @@ const AddTask = ({ onAdd }) => {
     <form className="add-form" onSubmit={onSubmit}>
       <div className="form-control">
         <label>Task</label>
-        <input type='text' placeholder='Add Task' value={text} onChange={(e) => setText(e.target.value)} />
+        <input type='text' placeholder='Add Project' value={text} onChange={(e) => setText(e.target.value)} />
       </div>
       <div className="form-control">
         <label>Day & Time</label>
@@ -38,7 +38,7 @@ const AddTask = ({ onAdd }) => {
       {/* priority */}
       <div className="form-control">
         <label>Priority</label>
-        <select className='select-menu' name='priority' value={priority} onChange={(e) => setPriority(e.target.value)}>
+        <select className='select-menu w-full mt-1' name='priority' value={priority} onChange={(e) => setPriority(e.target.value)}>
           <option value='none'>Select Priority Level</option>
           <option value='low'>Low</option>
           <option value='medium'>Medium</option>

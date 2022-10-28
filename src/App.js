@@ -29,7 +29,7 @@ const App = () => {
   const fetchTasks = async () => {
     const res = await fetch(`http://localhost:5000/tasks`)
     const data = await res.json()
-    // console.log(data)
+    console.log(data)
     return data
   }
 
@@ -110,7 +110,7 @@ const App = () => {
         <Routes>
           <Route
             path='/'
-            element={
+            element = {
               <>
                 {/* AddTask form, && is a short ternary for no else condition */}
                 {showAddTask && <AddTask onAdd={addTask} />}
