@@ -24,8 +24,17 @@
       "reminder": false,
       "priority": "medium",
       "progress": "50",
-      "note": "Working on TaskDetails and EditTask",
+      "note": "Working on TaskDetails and EditTask - 10/28/22",
       "id": 3
+    },
+    {
+      "text": "Recipe App",
+      "day": "Dec 31, 2022",
+      "reminder": true,
+      "priority": "high",
+      "progress": "30",
+      "note": "Reactify the app. ",
+      "id": 4
     }
   ]
 }

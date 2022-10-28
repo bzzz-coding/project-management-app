@@ -1,29 +1,31 @@
 import { useState } from 'react'
 
 
-const EditTask = ({ onEdit }) => {
-  const [text, setText] = useState(text)
-  const [day, setDay] = useState(day)
-  // const [reminder, setReminder] = useState(false)
-  const [priority, setPriority] = useState(priority)
-  const [progress, setProgress] = useState(progress)
-  const [note, setNote] = useState(note)
+const EditTask = ({ task, onUpdate }) => {
+  const [text, setText] = useState(task.text)
+  const [day, setDay] = useState(task.day)
+  const [reminder, setReminder] = useState(task.reminder)
+  const [priority, setPriority] = useState(task.priority)
+  const [progress, setProgress] = useState(task.progress)
+  const [note, setNote] = useState(task.note)
 
   const onSubmit = (e) => {
     e.preventDefault()
     if (!text) {
-      alert('Please add a task')
+      alert('Please add a project')
       return
     }
 
-    onAdd({ text, day, reminder, priority, progress })
+    onUpdate({ text, day, reminder, priority, progress, note })
 
-    // clear the fields by resetting state
-    setText('')
-    setDay('')
-    setReminder(false)
-    setPriority('none')
-    setProgress(0)
+    // // clear the fields by resetting state
+    // setText('')
+    // setDay('')
+    // setReminder(false)
+    // setPriority('none')
+    // setProgress(0)
+    // setNote('')
+  
   }
 
   return (
@@ -61,9 +63,11 @@ const EditTask = ({ onEdit }) => {
         <label>Set Reminder</label>
         <input type='checkbox' checked={reminder} value={reminder} onChange={(e) => setReminder(e.currentTarget.checked)} />
       </div>
-      <input className="btn btn-block" type='submit' value='Save Task' />
+      <label>Note</label>
+      <textarea className='w-full mt-1' value={note} onChange={(e) => setNote(e.target.value)}></textarea>
+      <input className="btn btn-block" type='submit' value='Save Changes' />
     </form>
   )
 }
 
-export default AddTask
+export default EditTask

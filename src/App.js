@@ -102,6 +102,7 @@ const App = () => {
     setTasks(tasks.map((task) => task.id === id ? { ...task, reminder: data.reminder } : task))
   }
 
+
   return (
     <Router>
       <div className='container'>
@@ -110,7 +111,7 @@ const App = () => {
         <Routes>
           <Route
             path='/'
-            element = {
+            element={
               <>
                 {/* AddTask form, && is a short ternary for no else condition */}
                 {showAddTask && <AddTask onAdd={addTask} />}

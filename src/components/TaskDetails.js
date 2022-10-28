@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { useParams, Navigate, useNavigate, useLocation } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import Task from "./Task";
+import EditTask from "./EditTask"
 import Button from "./Button";
 
 const TaskDetails = () => {
     const [loading, setLoading] = useState(true)
+    const [showEditTask, setShowEditTask] = useState(false)
     const [task, setTask] = useState({})
     // const [error, setError] = useState(null)
 
@@ -29,6 +31,26 @@ const TaskDetails = () => {
         fetchTask()
     })
 
+    // Update Task
+  const updateTask = async (updatedTask) => {
+    
+    const res = await fetch(`http://localhost:5000/tasks/${params.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updatedTask)
+    })
+
+    // updatedTask
+    const data = await res.json()
+
+    // console.log(data.id)
+    setTask(data)
+  }
+
+
+
 
     return loading ? (
         <h3>Loading...</h3>
@@ -39,9 +61,9 @@ const TaskDetails = () => {
                 {/* <h3>{task.text}</h3>
                 <p>{task.day}</p> */}
                 <Task key={task.id} task={task} showDetails={false} showNote={true} />
-                <Button className='bg-midnight' onClick={() => {
-                    
-                }} text='Edit' />
+                {/* AddTask form, && is a short ternary for no else condition */}
+                {showEditTask && <EditTask task={task} onUpdate={updateTask} />}
+                <Button onClick={() => setShowEditTask(!showEditTask)} text={showEditTask ? 'Cancel' : 'Edit'} />
                 <Button onClick={() => {
                     navigate(-1)
                 }} text='Return' />
