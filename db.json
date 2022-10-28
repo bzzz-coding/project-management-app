@@ -3,9 +3,10 @@
     {
       "text": "Heatmap app",
       "day": "Oct 31, 2022",
-      "reminder": true,
-      "priority": "medium",
+      "reminder": false,
+      "priority": "low",
       "progress": "70",
+      "note": "",
       "id": 1
     },
     {
@@ -14,7 +15,17 @@
       "reminder": false,
       "priority": "high",
       "progress": "95",
+      "note": "",
       "id": 2
+    },
+    {
+      "text": "Project Management App",
+      "day": "Nov 30, 2022",
+      "reminder": false,
+      "priority": "medium",
+      "progress": "50",
+      "note": "Working on TaskDetails and EditTask",
+      "id": 3
     }
   ]
 }

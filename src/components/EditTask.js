@@ -1,13 +1,13 @@
 import { useState } from 'react'
 
 
-const AddTask = ({ onAdd }) => {
-  const [text, setText] = useState('')
-  const [day, setDay] = useState('')
-  const [reminder, setReminder] = useState(false)
-  const [priority, setPriority] = useState('none')
-  const [progress, setProgress] = useState(0)
-  const [note, setNote] = useState('')
+const EditTask = ({ onEdit }) => {
+  const [text, setText] = useState(text)
+  const [day, setDay] = useState(day)
+  // const [reminder, setReminder] = useState(false)
+  const [priority, setPriority] = useState(priority)
+  const [progress, setProgress] = useState(progress)
+  const [note, setNote] = useState(note)
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -16,7 +16,7 @@ const AddTask = ({ onAdd }) => {
       return
     }
 
-    onAdd({ text, day, reminder, priority, progress, note })
+    onAdd({ text, day, reminder, priority, progress })
 
     // clear the fields by resetting state
     setText('')
@@ -24,7 +24,6 @@ const AddTask = ({ onAdd }) => {
     setReminder(false)
     setPriority('none')
     setProgress(0)
-    setNote('')
   }
 
   return (
@@ -62,8 +61,6 @@ const AddTask = ({ onAdd }) => {
         <label>Set Reminder</label>
         <input type='checkbox' checked={reminder} value={reminder} onChange={(e) => setReminder(e.currentTarget.checked)} />
       </div>
-      <label>Note</label>
-      <textarea className='w-full mt-1' value={note} onChange={(e) => setNote(e.target.value)}></textarea>
       <input className="btn btn-block" type='submit' value='Save Task' />
     </form>
   )

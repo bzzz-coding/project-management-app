@@ -38,7 +38,7 @@ const TaskDetails = () => {
                 {/* <p>{pathname}</p> */}
                 {/* <h3>{task.text}</h3>
                 <p>{task.day}</p> */}
-                <Task key={task.id} task={task} showDetails={false} />
+                <Task key={task.id} task={task} showDetails={false} showNote={true} />
                 <Button className='bg-midnight' onClick={() => {
                     
                 }} text='Edit' />
