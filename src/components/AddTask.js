@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import moment from 'moment'
 
 
 const AddTask = ({ onAdd }) => {
@@ -35,12 +36,13 @@ const AddTask = ({ onAdd }) => {
       </div>
       <div className="form-control">
         <label>Day & Time</label>
-        <input type='text' placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)} />
+        {/* <input type='text' placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)} /> */}
+        <input type='date' min={moment().format('YYYY-MM-DD')} placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)}></input>
       </div>
       {/* priority */}
       <div className="form-control">
         <label>Priority</label>
-        <select className='select-menu w-full mt-1' name='priority' value={priority} onChange={(e) => setPriority(e.target.value)}>
+        <select className='select-menu w-full mt-1' name='priority' min='' value={priority} onChange={(e) => setPriority(e.target.value)}>
           <option value='none'>Select Priority Level</option>
           <option value='low'>Low</option>
           <option value='medium'>Medium</option>
