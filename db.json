@@ -2,34 +2,34 @@
   "tasks": [
     {
       "text": "Heatmap app",
-      "day": "Oct 31, 2022",
+      "day": "2022-11-30",
       "reminder": false,
       "priority": "low",
       "progress": "70",
-      "note": "",
+      "note": "Need to clean up code and abstract date formatting functions - 10/30/22",
       "id": 1
     },
     {
       "text": "Catlog app",
-      "day": "Oct 27, 2022",
+      "day": "2022-10-27",
       "reminder": false,
       "priority": "high",
-      "progress": "95",
+      "progress": "100",
       "note": "",
       "id": 2
     },
     {
       "text": "Project Management App",
-      "day": "Nov 30, 2022",
+      "day": "2022-11-20",
       "reminder": false,
       "priority": "medium",
-      "progress": "50",
-      "note": "Working on TaskDetails and EditTask - 10/28/22",
+      "progress": "60",
+      "note": "Working on TaskDetails and EditTask - 10/28/22\nNeed to add sorting - 10/30/22",
       "id": 3
     },
     {
       "text": "Recipe App",
-      "day": "Dec 31, 2022",
+      "day": "2022-12-31",
       "reminder": true,
       "priority": "high",
       "progress": "30",

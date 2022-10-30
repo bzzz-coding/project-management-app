@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import moment from 'moment'
 
 
 const EditTask = ({ task, onUpdate }) => {
@@ -36,7 +37,8 @@ const EditTask = ({ task, onUpdate }) => {
       </div>
       <div className="form-control">
         <label>Day & Time</label>
-        <input type='text' placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)} />
+        {/* <input type='text' placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)} /> */}
+        <input type='date' min={moment().format('YYYY-MM-DD')} placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)}></input>
       </div>
       {/* priority */}
       <div className="form-control">
