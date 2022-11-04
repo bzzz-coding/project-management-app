@@ -118,7 +118,7 @@ const App = () => {
                 {/* AddTask form, && is a short ternary for no else condition */}
                 {showAddTask && <AddTask onAdd={addTask} />}
 
-                <div className='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+                <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3'>
                   {/* pass in props: tasks, onDelete */}
                   {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No project to display'}
                 </div>
