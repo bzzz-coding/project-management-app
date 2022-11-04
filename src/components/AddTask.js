@@ -66,7 +66,7 @@ const AddTask = ({ onAdd }) => {
       </div>
       <label>Note</label>
       <textarea className='w-full mt-1' value={note} onChange={(e) => setNote(e.target.value)}></textarea>
-      <input className="btn btn-block" type='submit' value='Save Task' />
+      <input className="btn btn-accent" type='submit' value='Save Task' />
     </form>
   )
 }

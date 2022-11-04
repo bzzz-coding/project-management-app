@@ -13,14 +13,15 @@ const Header = ({ title, onAdd, showAdd }) => {
   const location = useLocation()
 
   return (
-    <header className='header'>
+    <header className='navbar flex flex-row justify-between p-9'>
       {/* if want to add inline style to html elements, use style={{comma-separated, jsx camelCase}}, e.g. <h1 style={{ color: 'red', backgroundColor: 'black'}}>{title}</h1> */}
-      <h1>{title}</h1>
+      <a href='/about' className='btn btn-ghost normal-case text-xl font-title'>{title}</a>
 
       {/* note how to write ternary operator with template literals */}
       {location.pathname === '/' && (
         <Button
-          color={showAdd ? 'Salmon' : 'MediumAquamarine'}
+          color={showAdd ? 'btn-secondary' : 'btn-accent'}
+          shape={''}
           text={showAdd ? 'Close' : 'Add'}
           onClick={onAdd}
         />

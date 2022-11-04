@@ -63,7 +63,7 @@ const TaskDetails = () => {
                 <Task key={task.id} task={task} showDetails={false} showNote={true} />
                 {/* AddTask form, && is a short ternary for no else condition */}
                 {showEditTask && <EditTask task={task} onUpdate={updateTask} />}
-                <Button onClick={() => setShowEditTask(!showEditTask)} text={showEditTask ? 'Cancel' : 'Edit'} />
+                <Button onClick={() => setShowEditTask(!showEditTask)} text={showEditTask ? 'Cancel' : 'Edit'} color={showEditTask ? 'btn-secondary' : 'btn-accent'}/>
                 <Button onClick={() => {
                     navigate(-1)
                 }} text='Return' />
