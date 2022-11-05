@@ -39,7 +39,7 @@ const EditTask = ({ task, onUpdate }) => {
       <label className="mt-3 label">
         <span className="label-text">Due Date</span>
       </label>
-      <input type='date' min={moment().format('YYYY-MM-DD')} placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)} className="input input-bordered w-full" />
+      <input type='date' placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)} className="input input-bordered w-full" />
 
       <label className="mt-3 label">
         <span className="label-text">Priority</span>
