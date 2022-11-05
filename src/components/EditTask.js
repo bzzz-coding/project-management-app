@@ -55,8 +55,8 @@ const EditTask = ({ task, onUpdate }) => {
         <span className="label-text">Progress %</span>
       </label>
       <input required type='number' min='0' max='100' placeholder='Progress' value={progress} onChange={(e) => setProgress(e.target.value)} className="input input-bordered w-full" />
-      <div className="progress-bar w-full mt-1 bg-gray-100 rounded-full h-2.5 dark:bg-gray-700">
-        <div className="bg-neutral h-2.5 rounded-full dark:bg-purple-500" style={{ width: `${progress}%` }}></div>
+      <div className="progress-bar w-full mt-1 bg-gray-100 rounded-full h-2.5">
+        <div className="bg-neutral h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
       </div>
 
       <label className="mt-3 label">

@@ -18,8 +18,8 @@ const Task = ({ task, onDelete, onToggle, showNote, showDetails }) => {
         {task.priority && task.priority === 'medium' && <p>Priority: <FaStar className='text-warning' style={{ display: 'inline' }} /><FaStar className='text-warning' style={{ display: 'inline' }} /></p>}
         {task.priority && task.priority === 'low' && <p>Priority: <FaStar className='text-accent-focus' style={{ display: 'inline' }} /></p>}
         <label>Progress:</label>
-        <div className="progress-bar w-full mt-1 bg-gray-100 rounded-full h-2.5 dark:bg-gray-700">
-          <div className="bg-neutral h-2.5 rounded-full dark:bg-purple-500" style={{ width: `${task.progress}%` }}></div>
+        <div className="progress-bar w-full mt-1 bg-gray-100 rounded-full h-2.5">
+          <div className="bg-neutral h-2.5 rounded-full" style={{ width: `${task.progress}%` }}></div>
         </div>
         {showNote && <div className='mt-2'><label>Note: </label><p className='block w-full mt-1'>{task.note}</p></div>}
         <div className='card-actions justify-end'>
