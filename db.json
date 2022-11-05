@@ -41,7 +41,7 @@
       "day": "2022-11-05",
       "reminder": false,
       "priority": "low",
-      "progress": "50",
+      "progress": "10",
       "note": "Testing date picker and moment.",
       "id": 5
     }

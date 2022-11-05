@@ -66,12 +66,13 @@ const TaskDetails = () => {
                     {/* AddTask form, && is a short ternary for no else condition */}
                     {showEditTask && <EditTask task={task} onUpdate={updateTask} />}
                     <div className="card-actions justify-center my-6">
-                    <Button onClick={() => setShowEditTask(!showEditTask)} text={showEditTask ? 'Cancel' : 'Edit'} color={showEditTask ? 'btn-secondary' : 'btn-accent'} shadow='shadow-md' />
-                    <Button onClick={() => {
+                        <Button onClick={() => setShowEditTask(!showEditTask)} text={showEditTask ? 'Cancel' : 'Edit'} color={showEditTask ? 'btn-secondary' : 'btn-accent'} shadow='shadow-md' />
+                        {/* <Button onClick={() => {
                         navigate(-1)
-                    }} text='Return' shadow='shadow-md' />
+                    }} text='Return' shadow='shadow-md' /> */}
+                        <a href='/' className='btn shadow-md'>Return</a>
                     </div>
-                   
+
                     {/* <Link className='mx-auto' to='/'><Button text='Go Back'/></Link> */}
                 </div>
 
