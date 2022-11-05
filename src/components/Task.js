@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaTimes, FaStar } from 'react-icons/fa'
+import { FaTimes, FaExclamation } from 'react-icons/fa'
 
 const Task = ({ task, onDelete, onToggle, showNote, showDetails }) => {
   return (
@@ -14,9 +14,9 @@ const Task = ({ task, onDelete, onToggle, showNote, showDetails }) => {
         <h3 className='card-title mb-4'>{task.text} </h3>
 
         <p>Due: {task.day}</p>
-        {task.priority && task.priority === 'high' && <p>Priority: <FaStar className='text-secondary-focus' style={{ display: 'inline' }} /><FaStar className='text-secondary-focus' style={{ display: 'inline' }} /><FaStar className='text-secondary-focus' style={{ display: 'inline' }} /></p>}
-        {task.priority && task.priority === 'medium' && <p>Priority: <FaStar className='text-warning' style={{ display: 'inline' }} /><FaStar className='text-warning' style={{ display: 'inline' }} /></p>}
-        {task.priority && task.priority === 'low' && <p>Priority: <FaStar className='text-accent-focus' style={{ display: 'inline' }} /></p>}
+        {task.priority && task.priority === 'high' && <p>Priority: <FaExclamation className='text-secondary-focus' style={{ display: 'inline' }} /><FaExclamation className='text-secondary-focus' style={{ display: 'inline' }} /><FaExclamation className='text-secondary-focus' style={{ display: 'inline' }} /></p>}
+        {task.priority && task.priority === 'medium' && <p>Priority: <FaExclamation className='text-warning' style={{ display: 'inline' }} /><FaExclamation className='text-warning' style={{ display: 'inline' }} /></p>}
+        {task.priority && task.priority === 'low' && <p>Priority: <FaExclamation className='text-accent-focus' style={{ display: 'inline' }} /></p>}
         <label>Progress:</label>
         <div className="progress-bar w-full mt-1 bg-gray-100 rounded-full h-2.5">
           <div className="bg-neutral h-2.5 rounded-full" style={{ width: `${task.progress}%` }}></div>
