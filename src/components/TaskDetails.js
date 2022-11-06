@@ -70,7 +70,7 @@ const TaskDetails = () => {
                         {/* <Button onClick={() => {
                         navigate(-1)
                     }} text='Return' shadow='shadow-md' /> */}
-                        <a href='/' className='btn shadow-md'>Return</a>
+                        <a href='/' className='btn btn-outline btn-ghost shadow-md'>Return</a>
                     </div>
 
                     {/* <Link className='mx-auto' to='/'><Button text='Go Back'/></Link> */}

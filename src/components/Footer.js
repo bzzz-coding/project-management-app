@@ -17,14 +17,14 @@ const Footer = () => {
         <a className="link link-hover">Press kit</a>
       </div> */}
       <div>
-        <div className="grid grid-flow-col gap-4">
+        <div className="grid grid-flow-col gap-4 text-accent-content">
           <a href='https://github.com/bzzz-coding'><FaGithub/></a>
           <a href='https://twitter.com/Bzzz_coding'><FaTwitter/></a>
           <a href='https://www.linkedin.com/in/bitian-zhang/'><FaLinkedinIn/></a>
         </div>
       </div>
       <div>
-        <p>Copyright © 2022 Bitian Zhang</p>
+        <p className='text-accent-content'>Copyright © 2022 Bitian Zhang</p>
       </div>
     </footer>
   )

@@ -15,7 +15,7 @@ const Header = ({ title, onAdd, showAdd }) => {
   return (
     <header className='navbar flex flex-row justify-between p-9'>
       {/* if want to add inline style to html elements, use style={{comma-separated, jsx camelCase}}, e.g. <h1 style={{ color: 'red', backgroundColor: 'black'}}>{title}</h1> */}
-      <a href='/about' className='btn btn-ghost normal-case text-xl font-title'>{title}</a>
+      <a href='/about' className='btn btn-ghost normal-case text-xl text-extrabold font-title text-primary-content'>{title}</a>
 
       {/* note how to write ternary operator with template literals */}
       {location.pathname === '/' && (

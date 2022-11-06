@@ -5,7 +5,7 @@
       "day": "2022-11-30",
       "reminder": false,
       "priority": "low",
-      "progress": "70",
+      "progress": "80",
       "note": "Need to clean up code and abstract date formatting functions - 10/30/22",
       "id": 1
     },
@@ -15,7 +15,7 @@
       "reminder": false,
       "priority": "high",
       "progress": "100",
-      "note": "",
+      "note": "Need to move from Heroku to Railway! - 11/6/22",
       "id": 2
     },
     {
