@@ -1,3 +1,16 @@
+<td width="50%" valign="top">
+  <h3 align="center">Project Tracker</h3>
+    <br />
+    <a target="_blank" href="https://github.com/bzzz-coding/project-management-app">
+        <video src="https://user-images.githubusercontent.com/86077274/200188445-ad1c30c7-df32-46d9-ade5-f44ab991de7d.mov" width="100%" alt="Daily Task Heatmap"/>
+    </a>
+    <br />
+    <p align="center">
+  </p>
+    <p><strong>React, Node, Express, JSON Server, Javascript, HTML, TailwindCSS, daisyUI & CSS</strong> - Track the priority and progress of all projects, never drop a ball!</p>
+</td>
+
+
 # Project Management App
 
 - User can add, edit or delete a project
